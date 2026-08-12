@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .all{
+                background:#d2ecee;
+                color:rgb(124, 25, 61);
+                padding:10px 45px;
+                border-radius:10px;
+                font-size:20px;
+            }
+            .booking{
+                display:grid;
+                gap:15px;
+                font-size: 25px;
+                }
+             select{
+                width:100%;
+                padding:15px;
+                font-size:17px;
+                border:1px solid #ddd;
+                border-radius:8px;
+                }
+                .button{
+                background:#5B21FF;
+                color:white;
+                padding:15px 45px;
+                border:none;
+                border-radius:8px;
+                font-size:18px;
+                cursor:pointer;
+                }
+                
+    </style>
+</head>
+<body>
+    <div class="all">
+<div class="booking">
+    <h2 class="title">Book Movie Tickets</h2>
+
+<div>
+    <label>Date</label>
+    <input type="date">
+</div>
+
+<div>
+    <label>Show Time</label>
+    <select>
+        <option>Select Time</option>
+        <option>10:00 AM</option>
+        <option>1:00 PM</option>
+        <option>4:00 PM</option>
+        <option>7:00 PM</option>
+    </select>
+</div>
+
+<div >
+    <label>Tickets</label>
+    <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+
+<div>
+    <label>Seat Type</label>
+    <select>
+        <option>Silver</option>
+        <option>Gold</option>
+        <option>VIP</option>
+    </select>
+</div>
+</div>
+
+    <button class="button ">Book </button>
+    <a href="menu.html"><button class="button">menu</button></a>
+</div>
+</body>
+</html>
