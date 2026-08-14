@@ -91,26 +91,26 @@
 <div class="cards">
 
         <div class="card">
-        <a href="booking.html"> <img src="spiderman.jpg"></a>    
+        <a href="booking.php"> <img src="spiderman.jpg"></a>    
         <h3>Spider-Man</h3>
         </div>
 
 
         <div class="card">
-        <a href="booking.html"> <img src="Titanic.jpg"></a>
+        <a href="booking.php"> <img src="Titanic.jpg"></a>
         <h3>Titanic</h3>
         </div>
 
 
         <div class="card">
-        <a href="booking.html"> <img src="Batman.jpg"></a>
+        <a href="booking.php"> <img src="Batman.jpg"></a>
         
         <h3>The Batman</h3>
         </div>
 
 
         <div class="card">
-        <a href="booking.html"> <img src="squid game.jpg"></a>
+        <a href="booking.php"> <img src="squid game.jpg"></a>
         <h3>Squid Game</h3>
         </div>
 </div>
@@ -122,8 +122,16 @@
     </div>
 
     <div class="card">
-        <img src="" alt=""></a>
-        <h3>Avatar</h3>
+        <img src="maleficent.jpg" alt=""></a>
+        <h3>Maleficent</h3>
+    </div>
+    <div class="card">
+        <img src="scary movie.jpg" alt=""></a>
+        <h3>Scary Movie</h3>
+    </div>
+    <div class="card">
+        <img src="moncol.jpg" alt=""></a>
+        <h3>Moncal</h3>
     </div>
 </div>
 </section>

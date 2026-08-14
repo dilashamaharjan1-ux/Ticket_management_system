@@ -82,14 +82,14 @@ $canOrder = ($currentTime >= $startTime && $currentTime <= $endTime);
     <div class="all">
 
         <div class="drink">
-            <a href="drink.html">
+            <a href="drink.php">
                 <img src="drink.jpg" alt="Drinks">
             </a>
             <h3>Drinks</h3>
         </div>
 
         <div class="drink">
-            <a href="popcorn.HTML">
+            <a href="popcorn.php">
                 <img src="popcorn.jpg" alt="Popcorn">
             </a>
             <h3>Popcorn</h3>
