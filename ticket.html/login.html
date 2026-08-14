@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fff0f5, #f9dce8);
+        }
+
+       
+        .container {
+            width: 1100px;
+            min-height: 650px;
+            display: flex;
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(150, 60, 100, 0.20);
+        }
+
+        /* LEFT SIDE */
+        .left {
+            width: 50%;
+            background: linear-gradient(145deg, #e4f8f2, #ccefe5);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(190, 235, 220, 0.55);
+            border-radius: 50%;
+            top: 70px;
+            left: 130px;
+        }
+
+        .location {
+            position: absolute;
+            top: 100px;
+            left: 70px;
+            font-size: 45px;
+        }
+
+        .plant {
+            position: absolute;
+            right: 35px;
+            bottom: 90px;
+            font-size: 110px;
+            transform: rotate(-10deg);
+        }
+
+        /* PHONE */
+        .phone {
+            width: 250px;
+            height: 480px;
+            background: #222;
+            border-radius: 30px;
+            padding: 9px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #e8faf5, #ffffff);
+            border-radius: 22px;
+            overflow: hidden;
+            padding: 25px 15px;
+        }
+
+        .phone-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .plane {
+            text-align: center;
+            font-size: 70px;
+            margin: 15px 0 25px;
+        }
+
+        .trip-box {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .trip-box small {
+            display: block;
+            color: #777;
+            font-size: 9px;
+            margin-bottom: 3px;
+        }
+
+        .trip-box strong {
+            font-size: 12px;
+            color: #333;
+        }
+
+        .search-btn {
+            width: 100%;
+            border: none;
+            padding: 11px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #e43e7d, #c72b65);
+            color: white;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        /* SUITCASE */
+        .suitcase {
+            position: absolute;
+            left: 75px;
+            bottom: 70px;
+            width: 105px;
+            height: 190px;
+            background: #e86b94;
+            border-radius: 15px;
+            z-index: 1;
+            box-shadow: 5px 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .handle {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            border: 8px solid #333;
+            border-bottom: none;
+            border-radius: 15px 15px 0 0;
+            top: -35px;
+            left: 30px;
+        }
+
+        .suitcase-line {
+            position: absolute;
+            width: 3px;
+            height: 150px;
+            background: rgba(120, 30, 70, 0.2);
+            top: 20px;
+        }
+
+        .line1 {
+            left: 25px;
+        }
+
+        .line2 {
+            left: 50px;
+        }
+
+        .line3 {
+            left: 75px;
+        }
+
+        /* TICKET */
+        .ticket {
+            position: absolute;
+            right: 40px;
+            bottom: 80px;
+            width: 210px;
+            height: 90px;
+            background: #fff0f6;
+            border-radius: 8px;
+            transform: rotate(-15deg);
+            z-index: 5;
+            padding: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .ticket h3 {
+            color: #c72b65;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .ticket p {
+            font-size: 9px;
+            color: #777;
+        }
+
+        .barcode {
+            position: absolute;
+            right: 10px;
+            bottom: 12px;
+            width: 55px;
+            height: 25px;
+            background: repeating-linear-gradient(
+                90deg,
+                #333 0px,
+                #333 2px,
+                transparent 2px,
+                transparent 4px
+            );
+        }
+
+        /* RIGHT SIDE */
+        .right {
+            width: 50%;
+            background: linear-gradient(145deg, #fff0f6, #f9e0e9);
+            padding: 70px 65px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ticket-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 38px;
+            color: #c72b65;
+            box-shadow: 0 8px 20px rgba(150, 50, 90, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #b62959;
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .decoration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .decoration span {
+            width: 60px;
+            height: 3px;
+            background: #e8a0ba;
+        }
+
+        .dot {
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            background: #c72b65 !important;
+        }
+
+        /* INPUT */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-size: 17px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box span {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 22px;
+            color: #c72b65;
+        }
+
+        input {
+            width: 100%;
+            height: 55px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            padding: 0 50px;
+            font-size: 16px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(130, 50, 80, 0.12);
+        }
+
+        input:focus {
+            box-shadow: 0 0 0 2px #e87da2;
+        }
+
+        .eye {
+            position: absolute !important;
+            left: auto !important;
+            right: 18px;
+            color: #333 !important;
+            cursor: pointer;
+        }
+
+        /* FORGOT PASSWORD */
+        .forgot {
+            text-align: right;
+            margin: 5px 0 40px;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            color: #c72b65;
+            font-weight: bold;
+        }
+
+        /* LOGIN */
+        .login-btn {
+            width: 100%;
+            height: 58px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #24b5c9, #1598c1);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(20, 150, 190, 0.25);
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(20, 150, 190, 0.35);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .container {
+                width: 90%;
+            }
+
+            .right {
+                padding: 50px 35px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                min-height: 500px;
+            }
+
+            .right {
+                padding: 50px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+       
+        <div class="left">
+
+            <div class="circle"></div>
+
+            <div class="location">📍</div>
+
+           
+            <div class="suitcase">
+                <div class="handle"></div>
+                <div class="suitcase-line line1"></div>
+                <div class="suitcase-line line2"></div>
+                <div class="suitcase-line line3"></div>
+            </div>
+
+           
+            <div class="phone">
+                <div class="phone-screen">
+
+                    <div class="phone-header">
+                        <span>☰</span>
+                        <span>BOOK TICKET</span>
+                        <span>🔔</span>
+                    </div>
+
+                    <div class="plane">✈️</div>
+
+                    <div class="trip-box">
+                        <small>FROM</small>
+                        <strong>Kathmandu (KTM)</strong>
+                    </div>
+
+                    <div class="trip-box">
+                        <small>TO</small>
+                        <strong>Pokhara (PKR)</strong>
+                    </div>
+
+                    <div class="trip-box">
+                        <small>DATE</small>
+                        <strong>24 May, 2024</strong>
+                    </div>
+
+                    <button class="search-btn">SEARCH</button>
+
+                </div>
+            </div>
+
+            <!-- Ticket -->
+            <div class="ticket">
+                <h3>🎟 TICKET</h3>
+                <p>Flight: KTM → PKR</p>
+                <p>Seat: A12</p>
+                <div class="barcode"></div>
+            </div>
+
+            <div class="plant">🌿</div>
+
+        </div>
+
+
+       
+        <div class="right">
+
+            <div class="ticket-icon">🎟️</div>
+
+            <h1>Ticket Booking</h1>
+
+            <div class="decoration">
+                <span></span>
+                <span class="dot"></span>
+                <span></span>
+            </div>
+
+            <form>
+
+                <div class="form-group">
+                    <label>Email</label>
+
+                    <div class="input-box">
+                        <span>✉</span>
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Password</label>
+
+                    <div class="input-box">
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <span
+                            class="eye"
+                            onclick="showPassword()"
+                        >◉</span>
+                    </div>
+                </div>
+
+
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+
+                <button class="login-btn" type="submit">
+                    ⇥ &nbsp; Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function showPassword() {
+            const password = document.getElementById("password");
+
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>

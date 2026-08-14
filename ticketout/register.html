@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f2f2f2;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .all{
+            width:400px;
+            background:white;
+            box-shadow:0 3px 10px gray;
+        }
+
+        .right{
+            background:rgb(235, 217, 217);
+            padding:35px;
+        }
+
+        h1{
+            text-align:center;
+            color:#590e2a;
+            margin-bottom:25px;
+        }
+
+        form{
+            text-align:left;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:7px 0 12px;
+            border:1px solid #aaa;
+            border-radius:4px;
+        }
+
+        button{
+            width:100%;
+            padding:11px;
+            background:#1565c0;
+            color:white;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0d47a1;
+        }
+
+        .login{
+            text-align:center;
+            margin-top:15px;
+            font-size:14px;
+        }
+
+        .login a{
+            color:#1565c0;
+            text-decoration:none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="all">
+
+        <div class="right">
+
+            <h1>Register</h1>
+
+            <form>
+
+                Full Name
+                <input type="text" placeholder="Full Name">
+
+                Email
+                <input type="email" placeholder="Email">
+
+                Username
+                <input type="text" placeholder="Username">
+
+                Password
+                <input type="password" placeholder="Password">
+
+                Confirm Password
+                <input type="password" placeholder="Confirm Password">
+
+                <button type="submit">
+                    Register
+                </button>
+
+            </form>
+
+            <div class="login">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
