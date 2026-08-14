@@ -5,33 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-         .all{
+                body{
+                    justify-content:center;
+                    align-items:center;
+                    display:flex;
+                }
+                .all{
+                width:400px;
+                background:white;
+                box-shadow:0 3px 10px gray;
+            
+                }
+                .booking{
                 background:#d2ecee;
                 color:rgb(124, 25, 61);
                 padding:10px 45px;
-                border-radius:10px;
                 font-size:20px;
-            }
-            .booking{
                 display:grid;
                 gap:15px;
                 font-size: 25px;
+                justify-content:center;
+                align-items:center;
+
                 }
-             select{
+                select{
                 width:100%;
                 padding:15px;
                 font-size:17px;
-                border:1px solid #ddd;
+                border:1px solid #f26e6e;
                 border-radius:8px;
                 }
                 .button{
-                background:#5B21FF;
+                background:#9780d7;
                 color:white;
                 padding:15px 45px;
                 border:none;
                 border-radius:8px;
                 font-size:18px;
-                cursor:pointer;
                 }
                 
     </style>
@@ -76,10 +86,12 @@
         <option>VIP</option>
     </select>
 </div>
-</div>
+
 
     <button class="button ">Book </button>
     <a href="menu.html"><button class="button">menu</button></a>
 </div>
+</div>
+
 </body>
 </html>
