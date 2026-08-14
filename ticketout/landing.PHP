@@ -86,7 +86,7 @@
 
 <section class="movies">
 
-<h2>now Movies</h2>
+<h2>Now Movies</h2>
 
 <div class="cards">
 
